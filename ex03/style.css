@@ -7,5 +7,74 @@ body {
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
+}
+
+figure {
+  margin: 0;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+}
+
+figure img {
+  width: 320px;
+  height: 400px;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+figure img:hover {
+  opacity: 0.7;
+}
+
+dialog {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  height: calc(100vh - 2rem);
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+dialog img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+
+dialog button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 1px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  line-height: 1;
+  font-weight: 900;
 }
