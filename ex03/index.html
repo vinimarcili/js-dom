@@ -23,10 +23,17 @@
         <img onclick="openImage(this)" src="./images/hp.jpg" alt="Harry Potter">
       </figure>
     </main>
-    <dialog id="image-opened">
+    <!-- Solution with dialog tag -->
+    <!-- <dialog id="image-opened">
       <img onclick="zoomImage(this, event)" id="image-element" src="" alt="">
       <button onclick="closeImage()">X</button>
-    </dialog>
+    </dialog> -->
+
+    <!-- Solution with div tag -->
+    <div id="image-opened" class="manual-dialog">
+      <img onclick="zoomImage(this, event)" id="image-element" src="" alt="">
+      <button onclick="closeImage()">X</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

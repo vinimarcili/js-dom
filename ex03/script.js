@@ -9,11 +9,13 @@ function openImage(element) {
   image.alt = alt
 
   dialog.setAttribute("open", true)
+  dialog.classList.add("open")
 }
 
 function closeImage() {
   const dialog = document.getElementById("image-opened")
   dialog.removeAttribute("open")
+  dialog.classList.remove("open")
 
   const image = document.getElementById("image-element")
   image.src = ""
