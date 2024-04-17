@@ -10,7 +10,7 @@
   <body>
     <h1>Movies</h1>
     <main>
-      <figure >
+      <figure>
         <img onclick="openImage(this)" src="./images/aladin.jpg" alt="Aladin">
       </figure>
       <figure>
@@ -23,13 +23,7 @@
         <img onclick="openImage(this)" src="./images/hp.jpg" alt="Harry Potter">
       </figure>
     </main>
-    <!-- Solution with dialog tag -->
-    <!-- <dialog id="image-opened">
-      <img onclick="zoomImage(this, event)" id="image-element" src="" alt="">
-      <button onclick="closeImage()">X</button>
-    </dialog> -->
 
-    <!-- Solution with div tag -->
     <div id="image-opened" class="manual-dialog">
       <img onclick="zoomImage(this, event)" id="image-element" src="" alt="">
       <button onclick="closeImage()">X</button>
