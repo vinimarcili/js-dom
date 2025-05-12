@@ -27,6 +27,7 @@ h3 {
 h5 {
   margin: 10px 0 5px;
   color: #007acc;
+  font-size: 1.5rem;
 }
 
 h6 {
@@ -64,4 +65,13 @@ button {
 button:hover {
   background-color: #007acc;
   color: #fff;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
