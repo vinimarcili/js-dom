@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Seção: Eventos de Mouse -->
+  <section>
+    <h3>Eventos de Mouse</h3>
+    <div class="event-block" id="click-event">
+      <h5>click</h5>
+      <p>Explicação: disparado quando um elemento é clicado.</p>
+      <button onclick="">Teste via onclick</button>
+      <button id="button-click-listener">Teste via addEventListener</button>
+      <h6>Sobre o event</h6>
+      <table class="event-attributes">
+        <thead>
+          <tr>
+            <th>Atributo</th>
+            <th>Descrição</th>
+            <th>Uso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>target</td>
+            <td>Elemento que disparou o evento</td>
+            <td><code>event.target.id</code></td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>Tipo do evento</td>
+            <td><code>event.type</code></td>
+          </tr>
+          <tr>
+            <td>timeStamp</td>
+            <td>Tempo em milissegundos desde o carregamento da página</td>
+            <td><code>event.timeStamp</code></td>
+          </tr>
+          <tr>
+            <td>Outros</td>
+            <td>Outros atributos do evento</td>
+            <td><code>event.clientX</code>, <code>event.clientY</code>, etc.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <!-- Seção: Eventos de Teclado -->
+  <section>
+    <h3>Eventos de Teclado</h3>
+    <div class="event-block" id="keydown-event">
+      <h5>keydown</h5>
+      <p>Explicação: disparado quando uma tecla é pressionada.</p>
+      <button onkeydown="">Teste via onkeydown</button>
+      <button id="button-keydown-listener">Teste via addEventListener</button>
+      <p>O objeto event contém <code>event.key</code>, <code>event.code</code>, etc.</p>
+    </div>
+  </section>
+
+  <!-- Seção: Eventos de Formulário -->
+  <section>
+    <h3>Eventos de Formulário</h3>
+    <form class="event-block" id="submit-event">
+      <h5>submit</h5>
+      <p>Explicação: disparado quando um formulário é enviado.</p>
+      <button type="submit">Teste via onsubmit</button>
+      <button id="button-submit-listener" type="button">Teste via addEventListener</button>
+      <p>O objeto event permite <code>event.preventDefault()</code>.</p>
+    </form>
+
+  </section>
+
+  <!-- Seção: Eventos de Janela -->
+  <section>
+    <h3>Eventos de Janela</h3>
+    <div class="event-block" id="load-event">
+      <h5>load</h5>
+      <p>Explicação: disparado quando a janela ou recurso é carregado.</p>
+
+      <body onload=""></body>
+      <button id="button-load-listener">Teste via addEventListener</button>
+    </div>
+
+  </section>
+
+  <!-- Seção: Eventos de Touch -->
+  <section>
+    <h3>Eventos de Touch</h3>
+    <div class="event-block" id="touchstart-event">
+      <h5>touchstart</h5>
+      <p>Explicação: disparado quando um dedo toca a tela.</p>
+      <button ontouchstart=""></button>
+      <button id="button-touchstart-listener">Teste via addEventListener</button>
+    </div>
+
+  </section>
+
+  <!-- Seção: Outros Eventos -->
+  <section>
+    <h3>Outros Eventos</h3>
+    <div class="event-block" id="contextmenu-event">
+      <h5>contextmenu</h5>
+      <p>Explicação: disparado ao abrir o menu de contexto.</p>
+      <button oncontextmenu=""></button>
+      <button id="button-contextmenu-listener">Teste via addEventListener</button>
+    </div>
+
+  </section>
+
+</body>
+
+</html>
