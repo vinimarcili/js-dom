@@ -55,7 +55,7 @@
     <div class="event-block" id="dblclick-event">
       <h5>dblclick</h5>
       <p>Explicação: disparado quando dois cliques rápidos são feitos.</p>
-      <button ondblclick="">Teste via ondblclick</button>
+      <button id="button-dblclick" ondblclick="handleDblClick(event)">Teste via ondblclick</button>
       <button id="button-dblclick-listener">Teste via addEventListener</button>
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -88,7 +88,7 @@
     <div class="event-block" id="mousedown-event">
       <h5>mousedown</h5>
       <p>Explicação: disparado quando um botão do mouse é pressionado.</p>
-      <button onmousedown="">Teste via onmousedown</button>
+      <button id="button-mousedown" onmousedown="handleMouseDown(event)">Teste via onmousedown</button>
       <button id="button-mousedown-listener">Teste via addEventListener</button>
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -121,7 +121,7 @@
     <div class="event-block" id="mouseup-event">
       <h5>mouseup</h5>
       <p>Explicação: disparado quando um botão do mouse é liberado.</p>
-      <button onmouseup="">Teste via onmouseup</button>
+      <button id="button-mouseup" onmouseup="handleMouseUp(event)">Teste via onmouseup</button>
       <button id="button-mouseup-listener">Teste via addEventListener</button>
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -154,7 +154,7 @@
     <div class="event-block" id="mousemove-event">
       <h5>mousemove</h5>
       <p>Explicação: disparado quando o mouse é movido.</p>
-      <button onmousemove="">Teste via onmousemove</button>
+      <button onmousemove="handleMouseMove(event)">Teste via onmousemove</button>
       <button id="button-mousemove-listener">Teste via addEventListener</button>
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -187,7 +187,7 @@
     <div class="event-block" id="mouseover-event">
       <h5>mouseover</h5>
       <p>Explicação: disparado quando o mouse passa por cima de um elemento.</p>
-      <button onmouseover="">Teste via onmouseover</button>
+      <button onmouseover="handleMouseOver(event)">Teste via onmouseover</button>
       <button id="button-mouseover-listener">Teste via addEventListener</button>
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -220,7 +220,7 @@
     <div class="event-block" id="mouseout-event">
       <h5>mouseout</h5>
       <p>Explicação: disparado quando o mouse sai de cima de um elemento.</p>
-      <button onmouseout="">Teste via onmouseout</button>
+      <button onmouseout="handleMouseOut(event)">Teste via onmouseout</button>
       <button id="button-mouseout-listener">Teste via addEventListener</button>
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -253,7 +253,7 @@
     <div class="event-block" id="mouseenter-event">
       <h5>mouseenter</h5>
       <p>Explicação: disparado quando o mouse entra em um elemento.</p>
-      <button onmouseenter="">Teste via onmouseenter</button>
+      <button onmouseenter="handleMouseEnter(event)">Teste via onmouseenter</button>
       <button id="button-mouseenter-listener">Teste via addEventListener</button>
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -286,7 +286,7 @@
     <div class="event-block" id="mouseleave-event">
       <h5>mouseleave</h5>
       <p>Explicação: disparado quando o mouse deixa um elemento.</p>
-      <button onmouseleave="">Teste via onmouseleave</button>
+      <button onmouseleave="handleMouseLeave(event)">Teste via onmouseleave</button>
       <button id="button-mouseleave-listener">Teste via addEventListener</button>
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -324,7 +324,7 @@
     <div class="event-block" id="keydown-event">
       <h5>keydown</h5>
       <p>Explicação: disparado quando uma tecla é pressionada.</p>
-      <input type="text" onkeydown="" placeholder="Teste via onkeydown">
+      <input type="text" onkeydown="handleKeyDown(event)" placeholder="Teste via onkeydown">
       <input id="input-keydown-listener" type="text" placeholder="Teste via addEventListener">
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -357,7 +357,7 @@
     <div class="event-block" id="keyup-event">
       <h5>keyup</h5>
       <p>Explicação: disparado quando uma tecla é liberada.</p>
-      <input type="text" onkeyup="" placeholder="Teste via onkeyup">
+      <input type="text" onkeyup="handleKeyUp(event)" placeholder="Teste via onkeyup">
       <input id="input-keyup-listener" type="text" placeholder="Teste via addEventListener">
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -390,7 +390,7 @@
     <div class="event-block" id="keypress-event">
       <h5>keypress</h5>
       <p>Explicação: disparado quando uma tecla é pressionada e liberada.</p>
-      <input type="text" onkeypress="" placeholder="Teste via onkeypress">
+      <input type="text" onkeypress="handleKeyPress(event)" placeholder="Teste via onkeypress">
       <input id="input-keypress-listener" type="text" placeholder="Teste via addEventListener">
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -425,7 +425,7 @@
   <!-- Seção: Eventos de Formulário -->
   <section>
     <h3>Eventos de Formulário</h3>
-    <form class="event-block" id="submit-event">
+    <form class="event-block" id="submit-event" onsubmit="handleSubmit(event)">
       <h5>submit</h5>
       <p>Explicação: disparado quando um formulário é enviado.</p>
       <button type="submit">Teste via onsubmit</button>
@@ -461,7 +461,7 @@
     <div class="event-block" id="change-event">
       <h5>change</h5>
       <p>Explicação: disparado quando o valor de um elemento de formulário é alterado.</p>
-      <input type="text" onchange="" placeholder="Teste via onchange">
+      <input type="text" onchange="handleChange(event)" placeholder="Teste via onchange">
       <input id="input-change-listener" type="text" placeholder="Teste via addEventListener">
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -494,7 +494,7 @@
     <div class="event-block" id="input-event">
       <h5>input</h5>
       <p>Explicação: disparado quando o conteúdo de um elemento de formulário é alterado.</p>
-      <input type="text" oninput="" placeholder="Teste via oninput">
+      <input type="text" oninput="handleInput(event)" placeholder="Teste via oninput">
       <input id="input-input-listener" placeholder="Teste via addEventListener">
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -527,7 +527,7 @@
     <div class="event-block" id="focus-event">
       <h5>focus</h5>
       <p>Explicação: disparado quando um elemento recebe o foco.</p>
-      <input type="text" onfocus="" placeholder="Teste via onfocus">
+      <input type="text" onfocus="handleFocus(event)" placeholder="Teste via onfocus">
       <input id="input-focus-listener" placeholder="Teste via addEventListener">
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -560,7 +560,7 @@
     <div class="event-block" id="blur-event">
       <h5>blur</h5>
       <p>Explicação: disparado quando um elemento perde o foco.</p>
-      <input type="text" onblur="" placeholder="Teste via onblur">
+      <input type="text" onblur="handleBlur(event)" placeholder="Teste via onblur">
       <input id="input-blur-listener" placeholder="Teste via addEventListener">
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -598,8 +598,6 @@
     <div class="event-block" id="load-event">
       <h5>load</h5>
       <p>Explicação: disparado quando a janela ou recurso é carregado.</p>
-
-      <div onload="">Tempo de load: </div>
       <div id="button-load-listener">Tempo de load: </div>
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -632,7 +630,6 @@
     <div class="event-block" id="resize-event">
       <h5>resize</h5>
       <p>Explicação: disparado quando a janela é redimensionada.</p>
-      <div onresize="">Tamanho da janela: </div>
       <div id="button-resize-listener">Tamanho da janela: </div>
       <h6>Sobre o event</h6>
       <table class="event-attributes">
@@ -702,7 +699,7 @@
     <div class="event-block" id="contextmenu-event">
       <h5>contextmenu</h5>
       <p>Explicação: disparado ao abrir o menu de contexto.</p>
-      <button oncontextmenu="">Teste via oncontextmenu</button>
+      <button oncontextmenu="handleContextMenu(event)">Teste via oncontextmenu</button>
       <button id="button-contextmenu-listener">Teste via addEventListener</button>
       <h6>Sobre o event</h6>
       <table class="event-attributes">

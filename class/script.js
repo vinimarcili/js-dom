@@ -6,25 +6,19 @@ document.getElementById('button-click-listener').addEventListener('click', handl
 
 // Evento de Duplo Click
 function handleDblClick(event) {
-  console.log('Duplo clique detectado!')
-  console.log('Número de cliques:', event.detail)
-  console.log('Timestamp:', event.timeStamp)
+  alert(`Duplo clique detectado!\nNúmero de cliques: ${event.detail}\nTimestamp: ${event.timeStamp}`)
 }
 document.getElementById('button-dblclick-listener').addEventListener('dblclick', handleDblClick)
 
 // Evento de Mouse Pressionado
 function handleMouseDown(event) {
-  console.log('Botão pressionado:', event.button) // 0: esquerdo, 1: meio, 2: direito
-  console.log('Estado dos botões:', event.buttons)
-  console.log('Posição:', `X: ${event.clientX}, Y: ${event.clientY}`)
+  alert(`Botão pressionado: ${event.button}\nEstado dos botões: ${event.buttons}\nPosição: X: ${event.clientX}, Y: ${event.clientY}`)
 }
 document.getElementById('button-mousedown-listener').addEventListener('mousedown', handleMouseDown)
 
 // Evento de Mouse Liberado
 function handleMouseUp(event) {
-  console.log('Botão liberado:', event.button)
-  console.log('Elemento:', event.target.id)
-  console.log('Posição:', `X: ${event.clientX}, Y: ${event.clientY}`)
+  alert(`Botão liberado: ${event.button}\nElemento: ${event.target.id}\nPosição: X: ${event.clientX}, Y: ${event.clientY}`)
 }
 document.getElementById('button-mouseup-listener').addEventListener('mouseup', handleMouseUp)
 
@@ -93,6 +87,7 @@ function handleKeyPress(event) {
   console.log('Which (deprecated):', event.which)
 }
 document.getElementById('input-keypress-listener').addEventListener('keypress', handleKeyPress)
+
 
 // ===================== Eventos de Formulário =====================
 
